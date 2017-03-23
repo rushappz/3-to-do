@@ -56,6 +56,13 @@
 
 	<div class="button button-block" ng-model="addTodo" ng-disabled="!name" ng-click="saveTodo()">SAVE</div>
 	</div>
+	<ion-list>
+	<ion-item ng-repeat="tdo in todo">
+		<div ng-click="removeTodo(tdo.$id)">
+		{{tdo.name}}
+		</div>
+	</ion-item>
+</ion-list>
 </div>
 	</ion-content>
 			</ion-view>
