@@ -3,7 +3,15 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var app = angular.module('todo', ['ionic']);
+	var config = {
+    apiKey: "AIzaSyBVWfRtAlfEV9zQVWuVr5Y-qR4zfhWZdQA",
+    authDomain: "todo-59de4.firebaseapp.com",
+    databaseURL: "https://todo-59de4.firebaseio.com/",
+    storageBucket: "gs://todo-59de4.appspot.com",
+  };
+    firebase.initializeApp(config);
+
+var app = angular.module('todo', ['ionic', 'firebase']);
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
